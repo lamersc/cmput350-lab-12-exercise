@@ -1,5 +1,8 @@
 ﻿Q3. What happens to the bounding boxes with update + fullRefit?
+The boxes stretch and can overlap. A refit keeps the same circles together, so their box has to cover the gap when they drift apart.
 
 Q4. What happens with reset (rebuild every frame) instead?
+The boxes fit more tightly because each rebuild groups nearby circles again. In a four-circle test, two boxes went from 104 pixels wide to 10.
 
 Q5. Why are some circles drawn with their sides cut off?
+The window cuts them off. A center can start or move within one radius of the edge, so part of the circle falls outside the image.
